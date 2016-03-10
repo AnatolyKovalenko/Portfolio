@@ -1,0 +1,77 @@
+[ 
+  {
+    "name": "HTML5", 
+    "percent": 85,
+    "color": "#E45929"
+  }, 
+  {
+    "name": "CSS3", 
+    "percent": 83,
+    "color": "#0F99D4"
+  },
+  {
+    "name": "JavaScript", 
+    "percent": 45,
+    "color": "#F3D31A"
+  },
+  {
+    "name": "AngularJS", 
+    "percent": 47,
+    "color": "#E24537"
+  },
+  {
+    "name": "jQuery", 
+    "percent": 65,
+    "color": "#003256"
+  },
+  {
+    "name": "AJAX", 
+    "percent": 78,
+    "color": "#008ACA"
+  },
+  {
+    "name": "SASS", 
+    "percent": 75,
+    "color": "#FF8EBB"
+  },
+  {
+    "name": "Bootstrap", 
+    "percent": 77,
+    "color": "#61224C"
+  },
+  {
+    "name": "Foundation",
+    "percent": 67,
+    "color": "#364E5D"
+  },
+  {
+    "name": "WordPress", 
+    "percent": 69,
+    "color": "#454240"
+  },
+  {
+    "name": "Git", 
+    "percent": 78,
+    "color": "#FF502E"
+  },
+  {
+    "name": "Web Designe", 
+    "percent": 82,
+    "color": "#009FD5"
+  },  
+  {
+    "name": "Linux", 
+    "percent": 72,
+    "color": "#FFCD00"
+  },
+  {
+    "name": "Photoshop", 
+    "percent": 68,
+    "color": "#19599B"
+  },
+  {
+    "name": "UI Design", 
+    "percent": 63,
+    "color": "#00BCC4"
+  }
+]
