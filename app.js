@@ -1,3 +1,6 @@
 var app = angular.module('app',[
-	'ui.router'
+	'ui.router',
+	'ngAnimate',
+	'duScroll',
+	'angular-svg-round-progress'
 ]);
