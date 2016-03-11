@@ -1,10 +1,10 @@
 app
 	.config(function($stateProvider, $urlRouterProvider){
 
-		$urlRouterProvider	
-			.otherwise("/about");
+	$urlRouterProvider	
+		.otherwise("/about");
 
-		$stateProvider
+	$stateProvider
 	    .state('about', {
 	      url: "/about",
 	      templateUrl: "about/AboutView.html",
