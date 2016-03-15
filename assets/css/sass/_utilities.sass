@@ -1,0 +1,48 @@
+//Fonts
+$font-P: Poppins
+$font-WSL: WorkSans-Light
+$font-WSM: WorkSans-Medium
+$font-A: Anurati
+
+//Colors
+$gr-color: #B2B2B2
+$blc-color: #000
+$white-color: #fff
+
+//Mixins
+@mixin box-size
+	width: 100%
+	height: 700px
+
+@mixin smooth-transition($sec)
+	-webkit-transition: all $sec cubic-bezier(0.8, 0, 0.2, 1)
+	-moz-transition: all $sec cubic-bezier(0.8, 0, 0.2, 1)
+	-ms-transition: all $sec cubic-bezier(0.8, 0, 0.2, 1)
+	-o-transition: all $sec cubic-bezier(0.8, 0, 0.2, 1)
+	transition: all $sec cubic-bezier(0.8, 0, 0.2, 1)
+
+@mixin turn-transform($deg)
+	-webkit-transform: skewY($deg)
+	-moz-transform: skewY($deg)
+	-ms-transform: skewY($deg)
+	-o-transform: skewY($deg)
+	transform: skewY($deg)
+
+@mixin border-radius($px)
+	-webkit-border-radius: ($px) 
+	-moz-border-radius: ($px) 
+	-ms-border-radius: ($px) 
+	-o-border-radius: ($px) 
+	border-radius: ($px) 
+
+@mixin triangle	($color)
+	content: ""
+	position: absolute
+	border-top: 50px solid $color
+	border-left: 80px solid transparent
+	border-right: 80px solid transparent
+	left: 0
+	right: 0
+	width: 0px
+	margin: 0 auto
+	z-index: 1

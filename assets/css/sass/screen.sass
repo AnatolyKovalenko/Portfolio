@@ -1,0 +1,680 @@
+@import compass/reset
+@import fonts
+@import utilities
+@import media
+
+//ngAnimate
+.anim-if.ng-enter, .anim-if.ng-leave
+  @include smooth-transition(0.8s)
+
+.anim-if.ng-enter
+  max-height: 0
+  opacity: 0
+
+.anim-if.ng-enter.ng-enter-active
+  max-height: 999px
+  opacity: 1
+
+.anim-if.ng-leave
+  @extend .anim-if.ng-enter.ng-enter-active
+
+.anim-if.ng-leave.ng-leave-active
+  @extend .anim-if.ng-enter
+
+body
+  background: $blc-color
+
+h1
+  font-family: $font-P
+  padding-top: 100px
+  padding-left: 50px
+  font-size: 96px
+  line-height: 1.1
+  letter-spacing: -2px
+  color: $white-color
+
+p
+  font-family: $font-WSL
+  font-size: 30px
+
+button
+  border: none
+  cursor: pointer
+  outline: none
+
+button#playpausebtn
+  position: absolute
+  z-index: 2
+  bottom: 20px
+  left: 30px
+  height: 100px
+  width: 100px
+  background: url(../../../assets/img/pause.png) no-repeat
+  background-size: 100px auto
+  background-position: center
+
+#soundWave
+  @include turn-transform(-4deg)
+
+  position: absolute
+  bottom: 50px
+  
+.back-door
+  padding: 0
+
+.g-section
+  display: inline-block
+  padding-bottom: 8%
+  position: relative
+
+.g-section:before
+  content: ""
+  width: 100%
+  height: 0
+  padding-bottom: 8%
+  margin-top: -4%
+  position: absolute
+  top: 0
+  right: 0
+  left: 0
+
+.first-box
+  @include box-size
+
+  height: 775px
+  background: $blc-color
+
+  h1
+    padding-top: 20px
+
+.next-box
+  @include box-size
+
+  background: $white-color
+
+  h1
+    color: $blc-color
+    padding-top: 150px
+
+  .c-text
+    padding-top: 160px
+
+    p
+      text-align: left
+      float: right
+      position: relative
+      right: 50px
+      font-size: 22px
+
+    span
+      font-family: $font-WSM
+
+.thrid-box
+  @include box-size
+
+  height: 100%
+  background: $gr-color
+
+  h1
+    padding-top: 150px
+
+  p
+    font-family: $font-WSM
+    padding-top: 150px
+    color: $white-color
+
+.footer
+  @include box-size
+
+  background: $blc-color
+
+.next-box:before
+  @include turn-transform(-4deg)
+
+  background-color: $white-color
+
+.thrid-box:before
+  @include turn-transform(4deg)
+
+  background-color: $gr-color
+
+.footer:before
+  @include turn-transform(-4deg)
+
+  background-color: $blc-color
+
+.brand
+  width: 205px
+
+.brand:before
+  background-size: 100% 100%
+  content: "AK"
+  line-height: 200px
+  color: $white-color
+  font-size: 50px
+  font-family: $font-A
+  font-weight: bold
+  text-align: center
+  width: 200px
+  height: 200px
+  margin: 0 auto
+  position: absolute
+
+.logo
+  animation: 5s linear infinite
+  animation-name: rotate-0
+  animation-delay: 0s
+  transform-origin: 50% 50%
+  transform: rotate(0deg)
+
+svg path
+  positon: absolute
+  fill: none
+  stroke-width: 2
+  top: 0
+  left: 0
+  transform-origin: 50% 50%
+  transform: rotate(0deg)
+  animation: 4s linear infinite
+
+.logo
+  svg path:nth-child(1)
+    opacity: 1
+    animation-name: rotate-1
+    animation-delay: .5s
+
+  svg path:nth-child(2)
+    opacity: .5
+    animation-name: rotate-2
+    animation-delay: .6s
+
+  svg path:nth-child(3)
+    opacity: .8
+    animation-name: rotate-3
+    animation-delay: .7s
+
+@keyframes rotate-0
+  from
+    transform: rotate(0deg)
+
+  to
+    transform: rotate(-360deg)
+
+@keyframes rotate-1
+  from
+    transform: rotate(0deg)
+
+  to
+    transform: rotate(360deg)
+
+@keyframes rotate-2
+  from
+    transform: rotate(0deg)
+
+  to
+    transform: rotate(-360deg)
+
+@keyframes rotate-3
+  from
+    transform: rotate(0deg)
+
+  to
+    transform: rotate(0deg)
+
+.navigation
+  top: 35%
+  right: 3%
+  position: absolute
+
+  ul
+    list-style-type: none
+
+  li
+    padding: 0 5px
+    float: left
+
+  a
+    -webkit-transition: opacity .4s
+    -moz-transition: opacity .4s
+    -ms-transition: opacity .4s
+    -o-transition: opacity .4s
+    transition: opacity .4s
+    position: relative
+    padding: 8px 5px
+    font-family: $font-WSL
+    font-size: 20px
+    color: $white-color
+    opacity: .7
+
+  a:after
+    @include smooth-transition(0.4s)
+
+    margin: 0
+    width: 0
+    height: 1px
+    background-color: $white-color
+    content: ""
+    position: absolute
+    bottom: 0
+    left: 0
+
+  a:hover:after
+    width: 100%
+
+  a:hover
+    opacity: 1
+
+.g-button
+  position: absolute
+  padding-top: 100px
+  margin-left: 50px
+  z-index: 1
+
+  \:before
+    @include smooth-transition(0.4s)
+
+    background-color: $white-color
+    padding-top: 65px
+    margin: 77px 0
+    width: 0%
+    height: 63px
+    position: absolute
+    top: 0
+    left: 0
+    content: ""
+    z-index: -1
+
+  \:hover:before
+    width: 100%
+
+  a
+    @include border-radius(4px)
+
+    -webkit-transition: all .4s
+    -moz-transition: all .4s
+    -ms-transition: all .4s
+    -o-transition: all .4s
+    transition: all .4s
+    border: 3px solid $white-color
+    padding: 20px 48px
+    font-family: $font-WSM
+    color: $white-color
+    font-size: 20px
+    z-index: 2
+
+  a:hover
+    color: $blc-color
+
+.blc
+  top: 100%
+  right: 50px
+
+  a
+    border-color: $blc-color
+    color: $blc-color
+
+  a:hover
+    color: $white-color
+
+  \:before
+    background-color: $blc-color
+
+.grey
+  cursor: pointer
+
+.t-box
+  padding-bottom: 200px
+
+.p-box
+  height: 686px
+  background: url(../../../assets/img/skills.png) no-repeat 
+  background-size: 686px auto
+  background-position: center
+
+.h-box
+  height: 686px
+  position: relative
+  bottom: 57%
+  background: url(../../../assets/img/astro.png) no-repeat
+  background-size: 741px auto
+  background-position: right
+
+.skill-circle
+  display: inline-block
+  padding: 50px 177px  
+
+  p
+    padding-top: 50px
+
+.progress-wrapper
+  position: relative
+
+.progress-wrapper .text
+  position: absolute
+  top: 50%
+  left: 0
+  -webkit-transform: translateY(-50%)
+  -moz-transform: translateY(-50%)
+  -ms-transform: translateY(-50%)
+  -o-transform: translateY(-50%)
+  transform: translateY(-50%)
+  
+  text-align: center
+  width: 100%
+  z-index: 1
+
+  p
+    padding-top: 0
+
+.footer
+  background: url(../../../assets/img/cut-moon.jpeg) 50% 100% no-repeat 
+  background-size: cover
+
+  h1
+    padding-top: 150px
+
+.f-text
+  padding-top: 150px
+
+  span
+    font-family: $font-WSM
+    color: $white-color
+
+  p
+    text-align: left
+    float: right
+    position: relative
+    right: 50px
+    font-size: 22px
+    color: $gr-color
+
+.ft-frt-box
+  margin-left: 40%
+
+.ft-nxt-box
+  margin-left: 64%
+
+.ft-thr-box
+  margin-left: 77%
+
+//Projects-page
+.c-box
+  position: relative
+  height: 900px
+  background-color: $white-color
+
+.c-box-txt
+  position: relative
+  top: 240px
+  left: 50px
+  width: 72%
+  background-color: $blc-color
+
+  h1
+    margin-left: -8px
+    padding: 0
+
+.c-box-pic-one
+  position: relative
+  top: 80px
+  height: 600px
+  background: url(../../../assets/img/c-box-pic-1.png) no-repeat
+  background-size: 100%
+  background-position: center
+
+.c-box-pic-two
+  @extend .c-box-pic-one
+
+  background: url(../../../assets/img/c-box-pic-2.png) no-repeat
+  background-size: 100%
+  background-position: center
+
+.c-box-pic-three
+  @extend .c-box-pic-one
+
+  background: url(../../../assets/img/c-box-pic-3.png) no-repeat
+  background-size: 100%
+  background-position: center
+
+.bta-c
+  width: 250px
+  margin: 0 auto
+  position: relative
+  top: -250px
+
+.c-hd
+  text-align: center
+
+  h1
+    text-transform: uppercase
+    color: $blc-color
+    font-family: $font-A
+    font-size: 125px
+    line-height: 4.5
+    letter-spacing: 22px
+
+  .blc
+    top: 150px
+    right: initial
+
+.c-hd:after
+  bottom: -50px
+
+  @include triangle($white-color)
+
+.c-trgl-gr
+  background-color: $gr-color
+
+.c-trgl-gr:after
+
+  @include triangle($gr-color)
+
+.c-trgl-blc:after
+
+  @include triangle($blc-color)
+
+.c-gr
+  background-color: $gr-color
+
+  .c-box-txt
+    background-color: $white-color
+
+    h1
+      color: $gr-color
+
+.c-blc
+  background-color: $blc-color
+
+  .c-box-txt
+    background-color: $gr-color
+
+    h1
+      color: $blc-color
+
+.c-wt
+  min-height: 900px
+  height: 100%
+
+  .c-box-txt
+    top: 150px
+    background-color: $white-color
+
+    h1
+      font-size: 85px
+      color: $blc-color
+
+  .blc
+    margin-top: 130px
+    top: initial
+    right: initial
+
+  .bta
+    margin-top: 250px
+    margin-left: 50px
+
+#wrapper
+  position: relative
+  top: -40px
+  -webkit-perspective: 1300px
+  perspective: 1300px
+
+#phone_1
+  width: 360px
+  height: 640px
+  
+.phone
+  border: 40px solid #121212
+  border-width: 55px 7px
+  -webkit-border-radius: 40px
+  border-radius: 40px
+  margin: 20px auto
+  overflow: hidden
+  -webkit-transition: all 0.5s ease
+  transition: all 0.5s ease
+  -webkit-animation: fadein 2s
+  -moz-animation: fadein 2s
+  -ms-animation: fadein 2s
+  -o-animation: fadein 2s
+  animation: fadein 2s
+
+.phone iframe
+  border: 0
+  width: 100%
+  height: 100%
+  background-color: $blc-color
+
+.phone.view_1
+  -webkit-transform: rotateX(50deg) rotateY(0deg) rotateZ(-30deg)
+  transform: rotateX(50deg) rotateY(0deg) rotateZ(-30deg)
+  box-shadow: -3px 3px 0 $blc-color, -6px 6px 0 $blc-color, -9px 9px 0 $blc-color, -12px 12px 0 $blc-color, -14px 10px 20px $blc-color
+
+.phone.view_2
+  -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+  box-shadow: 0px 3px 0 $blc-color, 0px 4px 0 $blc-color, 0px 5px 0 $blc-color, 0px 7px 0 $blc-color, 0px 10px 20px $blc-color
+
+@keyframes rotate
+  0%
+    transform: rotateX(50deg) rotateY(0deg) rotateZ(-30deg)
+
+  50%
+    transform: rotateX(50deg) rotateY(0deg) rotateZ(-40deg)
+
+  100%
+    transform: rotateX(50deg) rotateY(0deg) rotateZ(-30deg)
+
+.view_1.rotate
+  animation-name: rotate
+  animation-duration: 15s
+  animation-iteration-count: infinite
+  animation-timing-function: linear
+
+#phone-controls
+  position: absolute
+  top: 80px
+  right: 50px
+  width: 200px
+  font-family: $font-WSM
+  font-size: 16px
+
+#phones
+  border-top: 1px solid $blc-color
+  margin-top: 20px
+  padding-top: 20px
+
+.p-b
+  @include smooth-transition(0.4s)
+
+  @include border-radius(4px)   
+  
+  outline: none
+  width: 198px
+  border: 2px solid $blc-color  
+  background-color: $white-color
+  height: 49px
+  margin: 11px 0
+  color: $blc-color
+  
+#phones button
+  @extend .p-b
+
+#phones button:hover
+  color: $white-color
+  background-color: $blc-color
+
+#views button
+  @extend .p-b
+
+#views button:hover
+  color: $white-color
+  background-color: $blc-color
+
+@keyframes fadein
+  from
+    opacity: 0
+
+  to
+    opacity: 1
+
+//Connect-page
+.space
+  width: 100%
+  height: 100%
+  animation: spin 100s linear infinite
+  z-index: -1
+
+@keyframes spin
+  0%
+    transform: rotate(0deg)
+
+  20%
+    transform: rotate(2deg)
+
+  40%
+    transform: rotate(-2deg)
+
+  60%
+    transform: rotate(2deg)
+
+  80%
+    transform: rotate(-2deg)
+
+  100%
+    transform: rotate(0deg)
+
+.inf
+  position: absolute
+  z-index: 1
+  top: 15%
+  right: 30%
+  width: 800px
+  height: 350px
+
+  h1
+    margin-bottom: 50px
+    padding-left: 15px
+    color: $white-color
+    text-align: center
+    text-transform: uppercase
+    font-family: $font-A
+    font-size: 125px
+    letter-spacing: 22px
+    z-index: 1
+
+  ul
+    border-top: 1px solid $white-color
+    border-bottom: 1px solid $white-color
+
+  p
+    color: $white-color
+
+  ul li p:first-child
+    margin-top: 20px
+    font-family: $font-WSM
+    font-weight: 600
+
+  ul li:last-child
+    margin-bottom: 20px
+
+.bta
+  margin-left: 64%
