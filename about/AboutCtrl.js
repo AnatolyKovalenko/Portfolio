@@ -4,10 +4,11 @@
   app
     .controller('AboutCtrl',aboutCtrl);
 
-  function aboutCtrl($scope) {
+  function aboutCtrl($scope, $document) {
 
     $scope.show = false;
     $scope.toggle = function() {
+      $document.scrollToElement(document.getElementById('scrollView'), 0, 1300);
       $scope.show = !$scope.show;
     };
 
