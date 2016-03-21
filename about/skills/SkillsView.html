@@ -1,27 +1,27 @@
 <div class="col-md-12 anim-if" ng-if="show">
-	<div class="row">
-		<div ng-repeat="skill in skills" on-finish-render="countUp()" class="skill-circle">
-			<p>
-				{{skill.name}}
-			</p>
-			<br>
-			<br>
-			<div class="progress-wrapper">
-				<div
-					round-progress
-					max="100"
-					current="skill.percent"
-					color="{{skill.color}}"	
-					bgcolor="rgba(255,255,255,.1)"	
-					radius="140"
-					stroke="50"
-					duration="3000"
-					animation="easeInOutQuart">
-				</div>
-				<div class="text">
-					<p class="skill" data-percent="{{skill.percent}}"></p>
-				</div>
-			</div>
-		</div>
-	</div>
+  <div class="row">
+    <div ng-repeat="skill in skills" on-finish-render="countUp()" class="skill-circle">
+      <p>
+        {{skill.name}}
+      </p>
+      <br>
+      <br>
+      <div class="progress-wrapper">
+        <div
+          round-progress
+          max="100"
+          current="skill.percent"
+          color="{{skill.color}}" 
+          bgcolor="rgba(255,255,255,.1)"  
+          radius="140"
+          stroke="50"
+          duration="3000"
+          animation="easeInOutQuart">
+        </div>
+        <div class="text">
+          <p class="skill" data-percent="{{skill.percent}}"></p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
